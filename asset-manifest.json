@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.css": "/miren-react-app/static/css/main.dc3b7e38.chunk.css",
+    "main.js": "/miren-react-app/static/js/main.cf1aa8d2.chunk.js",
+    "main.js.map": "/miren-react-app/static/js/main.cf1aa8d2.chunk.js.map",
+    "runtime~main.js": "/miren-react-app/static/js/runtime~main.4a1e232a.js",
+    "runtime~main.js.map": "/miren-react-app/static/js/runtime~main.4a1e232a.js.map",
+    "static/js/2.93a7f13e.chunk.js": "/miren-react-app/static/js/2.93a7f13e.chunk.js",
+    "static/js/2.93a7f13e.chunk.js.map": "/miren-react-app/static/js/2.93a7f13e.chunk.js.map",
+    "static/js/3.f3e739f5.chunk.js": "/miren-react-app/static/js/3.f3e739f5.chunk.js",
+    "static/js/3.f3e739f5.chunk.js.map": "/miren-react-app/static/js/3.f3e739f5.chunk.js.map",
+    "index.html": "/miren-react-app/index.html",
+    "precache-manifest.7d1e3ac7a75d270b61a87587e742682e.js": "/miren-react-app/precache-manifest.7d1e3ac7a75d270b61a87587e742682e.js",
+    "service-worker.js": "/miren-react-app/service-worker.js",
+    "static/css/main.dc3b7e38.chunk.css.map": "/miren-react-app/static/css/main.dc3b7e38.chunk.css.map"
+  }
+}
