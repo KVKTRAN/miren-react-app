@@ -4,10 +4,25 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+import store from './app/store'
+import { Provider } from 'react-redux'
+
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+
+import TopPage from './components/Top'
+import Header from './components/Header'
+
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
+  <Provider store={store}>
+      <BrowserRouter>
+      <Header />
+        <Routes>
+          <Route path="/" element={<App />} />
+          <Route path="/tops" element={<TopPage />} />
+        </Routes>
+      </BrowserRouter>
+  </Provider>
+  ,
   document.getElementById('root')
 );
 

@@ -1,25 +1,65 @@
-import logo from './logo.svg';
-import './App.css';
+import * as React from "react";
+import axios from 'axios'
+import { connect } from 'react-redux'
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+import Home from "./components/Home"
+
+import { initial_event, initial_task } from './app/store'
+
+
+const styles = {
+  main: {
+    margin: 0,
+    backgroundColor: "white",
+    minHeight: 2000,
+  },
+  outlet: {
+    paddingTop: 100,
+  }
 }
 
-export default App;
+const URL = "https://kvktran.pythonanywhere.com/"
+
+class App extends React.Component {
+  componentDidMount() {
+    axios.get(URL + "events/")
+    .then((res) => {
+        this.props.initial_event(res.data)
+    })
+
+    axios.get(URL + "tasks/")
+    .then((res) => {
+        this.props.initial_task(res.data)
+    })
+  }
+
+  render() {
+    return (
+      <div style={styles.main}>
+        <Home />
+      </div>
+    );
+  }
+}
+
+const mapDispatchToProps = () => {
+  return {
+      initial_event,
+      initial_task,
+  }
+}
+
+export default connect(null, mapDispatchToProps())(App)
+
+// function Layout() {
+//   return (
+//     <div>
+//       <Header />
+
+//       {/* An <Outlet> renders whatever child route is currently active,
+//           so you can think about this <Outlet> as a placeholder for
+//           the child routes we defined above. */}
+//       <Outlet />
+//     </div>
+//   );
+// }
